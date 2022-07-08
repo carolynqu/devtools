@@ -219,7 +219,7 @@ class AppSizeController {
     changeAnalysisJsonFile(jsonFile);
 
     // Set name for root node.
-    processedJson['n'] = 'Root';
+    processedJson['n'] = 'Entire App';
 
     // Build a tree with [TreemapNode] from [processedJsonMap].
     final newRoot = generateTree(processedJson)!;
