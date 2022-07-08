@@ -52,9 +52,6 @@ class AppSizeController {
   final analysisRoot =
       ValueNotifier<Selection<TreemapNode>>(Selection<TreemapNode>());
 
-  ValueListenable<int> get selectedNodeIndex => _selectedNodeIndex;
-  final _selectedNodeIndex = ValueNotifier<int>(0);
-
   void changeAnalysisRoot(TreemapNode? newRoot) {
     if (newRoot == null) return;
 
