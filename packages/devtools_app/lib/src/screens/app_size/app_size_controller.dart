@@ -52,9 +52,6 @@ class AppSizeController {
   final analysisRoot =
       ValueNotifier<Selection<TreemapNode>>(Selection<TreemapNode>());
 
-  ValueListenable<int> get selectedNodeIndex => _selectedNodeIndex;
-  final _selectedNodeIndex = ValueNotifier<int>(0);
-
   void changeAnalysisRoot(TreemapNode? newRoot) {
     if (newRoot == null) return;
 
@@ -219,7 +216,7 @@ class AppSizeController {
     changeAnalysisJsonFile(jsonFile);
 
     // Set name for root node.
-    processedJson['n'] = 'Root';
+    processedJson['n'] = 'Entire App';
 
     // Build a tree with [TreemapNode] from [processedJsonMap].
     final newRoot = generateTree(processedJson)!;
